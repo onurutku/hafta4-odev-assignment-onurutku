@@ -36,14 +36,21 @@
 src='src/assets/register.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:200px; height:auto;'
+style='margin-right: 10px; width:500px; height:auto;'
 />
 
 <img
 src='src/assets/login.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:200px; height:auto;'
+style='margin-right: 10px; width:500px; height:auto;'
+/>
+
+<img
+src='src/assets/shop.jpg'
+raw=true
+alt='Subject Pronouns'
+style='margin-right: 10px; width:500px; height:auto;'
 />
 
 
