@@ -1,6 +1,6 @@
 # Week4 Homework Project Live Link
 ("https://commerce-out.netlify.app/login")
-# Youtube Project Explanation Video Link
+# You-tube Project Explanation Video Link
 ("https://youtu.be/W5ubadZA9RA")
 
 # Importan Note:
@@ -22,6 +22,8 @@
    <strong>Resolvers</strong>
    <strong>Lazy Load(Preloading-Strategy)</strong>
 
+   <hr>
+
    and also i used Google-Firebase backend-services for this project
 
    <strong>Firebase Auth Module</strong>
@@ -29,6 +31,14 @@
    <strong>Firebase Storage (store files)</strong>
 
    In this project as you can watch on youtube video, there is a user interface for a customer and a admin interface. Customers can buy see details of products and add products to their shoppin carts and checkout. Admin iterface can upload/delete products on website and check orders from customers checkouts to ship.
+
+   <hr>
+
+   <strong>Bootstrap</strong>
+   <strong>Scss</strong>
+   <strong>FontAwesome</strong>
+
+   For styling i used Bootstrap,Scss and FontAwesome.During coding the project sometimes i need some special mediaqueries to make project real responsive. For example you can find that changes on login.component.scss file.
 
   ## Some SS from Project
 
@@ -48,10 +58,30 @@ style='margin-right: 10px; width:500px; height:auto;'
 
 <img
 src='src/assets/shop.jpg'
+raw=trueScss
+
+<img
+src='src/assets/cart.jpg'
 raw=true
 alt='Subject Pronouns'
 style='margin-right: 10px; width:500px; height:auto;'
 />
+
+<img
+src='src/assets/detail.jpg'
+raw=true
+alt='Subject Pronouns'
+style='margin-right: 10px; width:500px; height:auto;'
+/>
+
+## for download this project to your loacal mahine
+<hr>
+you need to install Angular CLI version 13 or 14 and run "npm install" to call node modules.
+after that you can run ng serve to run project.
+
+Thank You.
+
+
 
 
 
