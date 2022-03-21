@@ -46,14 +46,14 @@
 src='src/assets/register.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:500px; height:auto;'
+style='margin-right: 10px; width:600px; height:auto;'
 />
 
 <img
 src='src/assets/login.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:500px; height:auto;'
+style='margin-right: 10px; width:600px; height:auto;'
 />
 
 <img
@@ -64,22 +64,25 @@ raw=trueScss
 src='src/assets/cart.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:500px; height:auto;'
+style='margin-right: 10px; width:600px; height:auto;'
 />
 
 <img
 src='src/assets/detail.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:500px; height:auto;'
+style='margin-right: 10px; width:600px; height:auto;'
 />
 
 ## download and run
 <hr>
-you need to install Angular CLI version 13 or 14 and run "npm install" to call node modules.
-after that you can run ng serve to run project.
+1-install Angular CLI version 13 or 14
+2-open a terminal and run
+git clone "https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-onurutku.git"
+3-run "npm install" to call node modules.
+4-run "ng s --o"
 
-Thank You.
+# Thank You.
 
 
 
