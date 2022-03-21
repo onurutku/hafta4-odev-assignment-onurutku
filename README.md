@@ -1,6 +1,6 @@
 # Week4 Homework Project Live Link
 ("https://commerce-out.netlify.app/login")
-# Youtube Project Explanation Vide Link
+# Youtube Project Explanation Video Link
 ("https://youtu.be/W5ubadZA9RA")
 
 # Importan Note:
@@ -36,7 +36,14 @@
 src='src/assets/register.jpg'
 raw=true
 alt='Subject Pronouns'
-style='margin-right: 10px; width:100px; height:auto;'
+style='margin-right: 10px; width:200px; height:auto;'
+/>
+
+<img
+src='src/assets/login.jpg'
+raw=true
+alt='Subject Pronouns'
+style='margin-right: 10px; width:200px; height:auto;'
 />
 
 
