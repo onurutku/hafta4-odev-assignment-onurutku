@@ -74,7 +74,7 @@ alt='Subject Pronouns'
 style='margin-right: 10px; width:500px; height:auto;'
 />
 
-## for download this project to your loacal mahine
+## download and run
 <hr>
 you need to install Angular CLI version 13 or 14 and run "npm install" to call node modules.
 after that you can run ng serve to run project.
