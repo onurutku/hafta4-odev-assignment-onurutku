@@ -1,0 +1,33 @@
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #4d4d4f !important;
+}
+.dropdown-item,
+a {
+  cursor: pointer;
+}
+.navbar-brand {
+  background-color: #ac1a2e;
+  padding: 10px;
+  border-radius: 10px;
+}
+#navbarDropdown {
+  font-size: 0.8rem;
+}
+.small-nav {
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .small-nav,
+  .bottom {
+    flex-direction: column;
+  }
+}
+.count {
+  background-color: #fff;
+  color: #ac1a2e;
+  border-radius: 100px;
+  padding: 2px;
+  font-weight: bold;
+}

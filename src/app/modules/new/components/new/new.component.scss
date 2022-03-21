@@ -1,0 +1,41 @@
+.container {
+  min-height: 70vh;
+}
+h2 {
+  color: #4d4d4f;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+img {
+  width: 85%;
+  max-height: 100%;
+}
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ac1a2e;
+}
+.right {
+  background-color: #e6e4e4;
+  min-height: 70vh;
+}
+.form-group {
+  padding-bottom: 1rem;
+}
+span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+input {
+  border-radius: 5px;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+select.ng-touched.ng-invalid {
+  border: 1px solid red;
+}

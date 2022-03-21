@@ -1,0 +1,18 @@
+<div
+  *ngIf="this.userLoggedIn"
+  class="footer d-flex justify-content-center align-items-center flex-column"
+>
+  <div class="icons p-4">
+    <fa-icon class="me-3" [icon]="faFaceBook"></fa-icon>
+    <fa-icon class="me-3" [icon]="faInsta"></fa-icon>
+    <fa-icon class="me-3" [icon]="faTube"></fa-icon>
+    <fa-icon [icon]="faTwitter"></fa-icon>
+  </div>
+  <div class="writings">
+    <p class="text-center">
+      <fa-icon class="copy" [icon]="faCopyRight"></fa-icon> Copyright
+      Commerce.All Rights Reserved
+    </p>
+    <p class="text-center">Powered by Create Commerce</p>
+  </div>
+</div>

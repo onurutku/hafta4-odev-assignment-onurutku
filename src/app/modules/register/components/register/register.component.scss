@@ -1,0 +1,43 @@
+.row {
+  height: 100vh;
+  width: 100%;
+  // background-image: linear-gradient(
+  //   to bottom right,
+  //   rgb(242, 247, 248) 0%,
+  //   rgb(225, 226, 228) 100.2%
+  // );
+}
+fa-icon {
+  font-size: 120px;
+}
+.left {
+  background-image: url("../../../../../assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h5 {
+  font-size: xx-large;
+}
+label {
+  font-size: 0.8rem;
+}
+img {
+  width: 50%;
+  border-radius: 100px;
+}
+.back {
+  background: transparent;
+  color: #000;
+  border: none;
+}
+.icon {
+  font-size: 1rem;
+}
+h1 {
+  color: #fff;
+  background-color: #ac1a2e;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}

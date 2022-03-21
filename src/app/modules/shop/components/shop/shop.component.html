@@ -1,0 +1,81 @@
+<div class="row sidebar">
+  <div
+    class="right col-sm-12 text-white d-flex justify-content-center align-items-center flex-row pb-2 pt-2"
+  >
+    <button #all [routerLink]="['/shop']" class="all focus">All</button>
+
+    <div *ngFor="let button of categories">
+      <span>|</span>
+      <button
+        [ngClass]="buttonValue == buton.value ? 'focus' : 'all'"
+        #buton
+        [routerLink]="['/shop']"
+        [queryParams]="{ search: buton.value }"
+        value="{{ button }}"
+        (click)="sendVal(buton.value)"
+      >
+        {{ button }}
+      </button>
+    </div>
+
+    <select #opt (click)="sortBy(opt.value)" id="sort" class="ms-2">
+      <option selected disabled value="">Sort By</option>
+      <option value="HL">Price High->Low</option>
+      <option value="LH">Price Low->Hight</option>
+    </select>
+  </div>
+</div>
+<div class="container mt-5 mb-5">
+  <div class="row mb-5">
+    <div
+      *ngFor="let product of products | search: categoryValue"
+      class="col-md-3 main-card"
+    >
+      <div [routerLink]="['/detail', product.id]" class="card mb-3">
+        <div class="image-div d-flex justify-content-center">
+          <img
+            class="card-img-top"
+            src="{{ product.imagePath }}"
+            alt="Card image cap"
+          />
+        </div>
+        <div class="body-div">
+          <div class="card-body">
+            <div class="title-div">
+              <h5 class="card-title text-center">
+                {{
+                  product.title.length > 25
+                    ? (product.title | slice: 0:25) + "..."
+                    : product.title
+                }}
+              </h5>
+            </div>
+            <div class="card-div">
+              <p class="card-text text-center">
+                {{
+                  product.description.length > 125
+                    ? (product.description | slice: 0:120) + "..."
+                    : product.description
+                }}
+              </p>
+            </div>
+            <div class="price-div">
+              <p class="size text-center mb-1">
+                <span>S-XXL</span>
+              </p>
+              <p class="price text-center mb-3">${{ product.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="!categoryValue"
+    class="d-flex justify-content-center align-items-center flex-row"
+  >
+    <button (click)="pageDown()" class="btn btn-sm me-2">Prev</button>
+    <span class="page-numbers">{{ currentPage + 1 }}/{{ totalPage + 1 }}</span>
+    <button (click)="pageUp()" class="btn btn-sm ms-2">Next</button>
+  </div>
+</div>

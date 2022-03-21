@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="left col-sm-8">
+      <h2 class="ms-3 mt-4">MY SHOPPING BAG</h2>
+      <div class="empty-border"></div>
+      <div class="row">
+        <div class="sm8 col-sm-8">
+          <h5 class="title-texts ms-3 mt-3 mb-0">Products</h5>
+        </div>
+        <div class="title-texts sm2 mt-3 mb-0 col-sm-2">Price</div>
+        <div class="title-texts sm2 mt-3 mb-0 col-sm-2">Total</div>
+      </div>
+      <hr />
+      <div *ngFor="let product of allCarts" class="row">
+        <div class="sm3 mb-3 col-sm-3">
+          <img
+            [src]="product.imagePath || '../../../assets/logo.png'"
+            alt="product-picture"
+          />
+        </div>
+        <div class="sm5 col-sm-5">
+          <p class="mb-0">{{ product.title }}</p>
+          <p class="mb-0">ITEM ID: {{ product.id }}</p>
+          <p class="mb-0">QTY: {{ product.quantity }}</p>
+          <p class="remove mb-0 mt-2">
+            <a (click)="onDelete(product.id)">REMOVE</a>
+          </p>
+        </div>
+        <div class="sm2 mt-3 mb-0 col-sm-2">${{ product.price }}</div>
+        <div class="sm2 mt-3 mb-0 col-sm-2">
+          ${{ +(product.price * product.quantity).toFixed(2) }}
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="right col-sm-4">
+      <h2 class="ms-3 mt-4">SUMMARY</h2>
+      <div class="empty-border"></div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="mt-4 ps-3">SUBTOTAL</h4>
+        </div>
+        <div class="col-sm-6">
+          <span class="mt-4 pe-3 float-end">${{ subTotal }}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5 class="h5 mt-4 ps-3">Shipping (10%)</h5>
+        </div>
+        <div class="col-sm-6">
+          <span class="mt-4 pe-3 float-end">${{ shipping }}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5 class="h5 mt-1 ps-3">Tax (18%)</h5>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <span class="mt-1 pe-3 float-end">${{ tax }}</span>
+        </div>
+      </div>
+      <div class="empty-border"></div>
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h4 class="mt-4 ps-3">TOTAL</h4>
+        </div>
+        <div class="col-sm-6">
+          <span class="mt-4 pe-3 float-end">${{ total }}</span>
+        </div>
+      </div>
+      <div class="empty-border"></div>
+      <div class="row ms-2 me-2 mt-3">
+        <button (click)="createOrder()" class="btn btn-sm pt-2 pb-2 mb-4">
+          CHECKOUT
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

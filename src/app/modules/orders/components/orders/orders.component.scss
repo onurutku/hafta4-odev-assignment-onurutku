@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Freehand&family=League+Gothic&family=Press+Start+2P&display=swap");
+.container {
+  height: 70vh;
+  overflow-y: scroll;
+}
+.empty-border {
+  border: 1px solid #4d4d4f;
+}
+img {
+  width: 2rem;
+  height: auto;
+  border-radius: 100px;
+}
+.container {
+  min-height: 73vh;
+}
+h2 {
+  font-family: "League Gothic", sans-serif;
+}

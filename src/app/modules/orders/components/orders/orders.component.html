@@ -1,0 +1,39 @@
+<div class="container mt-3 mb-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="ms-3 mt-4">ORDERS</h2>
+      <div class="empty-border"></div>
+      <table class="table table-striped table-hover mt-5">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Image</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Send</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of results; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td><img src="{{ order.imagePath }}" alt="" /></td>
+            <td>{{ order.productId }}</td>
+            <td>{{ order.title }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.userEmail }}</td>
+            <td>
+              <button
+                (click)="onDelete(order.userId, order.id, order.index)"
+                class="btn btn-success btn-sm"
+              >
+                Send
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

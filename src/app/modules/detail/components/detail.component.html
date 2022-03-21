@@ -1,0 +1,147 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 left">
+      <img
+        [src]="productById.imagePath || '../../../assets/dummy.jpg'"
+        alt="mont"
+      />
+    </div>
+    <div class="col-md-5 ps-4 right">
+      <div class="title d-flex justify-content-between align-items-center">
+        <div>
+          <h2 class="mt-3">{{ productById.title }}</h2>
+        </div>
+        <div *ngIf="userLoggedIn.email == 'admin@admin.com'">
+          <!-- ERROR HANDLING -->
+          <span *ngIf="isDeleted" class="text-success float-left me-1"
+            >Deleted <fa-icon [icon]="faCheck"></fa-icon
+          ></span>
+          <span *ngIf="isDeleted == false" class="text-danger float-left"
+            >Error Occured, Try Again <fa-icon [icon]="faX"></fa-icon
+          ></span>
+          <!-- ERROR HANDLING -->
+          <button (click)="onDelete()" class="btn btn-danger btn-sm ms-1">
+            Del
+          </button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="price">
+          <h5>${{ productById.price }}</h5>
+        </div>
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between">
+        <div class="price">DESCRIPTION</div>
+        <div class="comment">
+          <fa-icon (click)="toggle()" class="me-3" [icon]="faPlus"></fa-icon>
+        </div>
+      </div>
+      <div *ngIf="isOpen" class="d-flex justify-content-between mb-5">
+        <div class="description mt-3">
+          <p>
+            {{ productById.description }}
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between flex-column mb-5">
+        <div class="price">
+          <h5 class="quantity">QUANTITY</h5>
+        </div>
+        <div class="description mt-3">
+          <span (click)="minus(input.value)" class="me-3">-</span>
+          <input readonly #input type="number" min="0" value="1" />
+          <span (click)="plus(input.value)" class="ms-3">+</span>
+          <span class="float-end me-4">Stock:{{ productById.stock }}</span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between flex-column mb-5">
+        <!-- ERROR HANDLING -->
+        <span
+          *ngIf="addedToCart"
+          class="help-block text-center rounded text-success mb-3 me-3 ms-3"
+          >Product Added to Cart Successfully!</span
+        >
+        <span
+          *ngIf="addedToCart == false"
+          class="help-block text-center rounded text-danger mb-3 me-3 ms-3"
+          >Error Occured!</span
+        >
+        <!-- ERROR HANDLING -->
+        <button
+          (click)="addToCart()"
+          class="add-to-cart btn btn-sm"
+          type="button"
+        >
+          ADD TO CART
+        </button>
+      </div>
+      <div class="comment d-flex justify-content-between">
+        <a (click)="commentToggle()" class="underline"
+          >{{ comments.length }} Comments&nbsp;&nbsp;<fa-icon
+            class="comment-icon"
+            [icon]="faComment"
+          ></fa-icon
+        ></a>
+        <a (click)="writeCommentToggle()" class="underline"
+          ><fa-icon class="comment-icon" [icon]="faPen"></fa-icon
+          >&nbsp;&nbsp;Write a Comment</a
+        >
+      </div>
+      <hr />
+      <div
+        *ngIf="isCommnetsOpen"
+        class="comments d-flex justify-content-between flex-column"
+      >
+        <div *ngFor="let comment of comments">
+          <div>
+            <span
+              ><img
+                class="pp me-2"
+                src="../../../assets/profileComment.png"
+                alt=""
+              />{{ comment?.email }}</span
+            >
+            <p class="comment-body">
+              {{ comment?.comment }}
+            </p>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div
+        *ngIf="isWriteCommentOpen"
+        class="comment d-flex justify-content-between flex-column mb-5"
+      >
+        <form [formGroup]="commentForm" (submit)="onSubmit()">
+          <textarea
+            [formControlName]="'comment'"
+            cols="30"
+            rows="5"
+            class="rounded"
+          ></textarea>
+          <div class="mt-2">
+            <!-- ERROR HANDLING -->
+            <span
+              *ngIf="isCommentSavedSuccessfully"
+              class="text-success float-left"
+              >Saved <fa-icon [icon]="faCheck"></fa-icon
+            ></span>
+            <span
+              *ngIf="isCommentSavedSuccessfully == false"
+              class="text-danger float-left"
+              >Error Occured, Try Again <fa-icon [icon]="faX"></fa-icon
+            ></span>
+            <!-- ERROR HANDLING -->
+            <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+            <button type="submit" class="btn btn-primary btn-sm float-end">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

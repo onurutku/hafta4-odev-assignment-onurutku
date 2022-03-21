@@ -1,0 +1,67 @@
+img {
+  width: 85%;
+  max-height: 100%;
+}
+.right {
+  background-color: #e6e4e4;
+}
+h2 {
+  color: #4e5055;
+}
+h5 {
+  color: #ac1a2e;
+}
+fa-icon {
+  cursor: pointer;
+}
+.price {
+  font-weight: bold;
+}
+.underline {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.quantity {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+input {
+  border: none;
+  width: 30%;
+}
+.add-to-cart {
+  background-color: #ac1a2e;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+.pp {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.comment-body {
+  margin-top: 0.5rem;
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  font-weight: 400;
+  font-size: small;
+}
+span {
+  color: #ac1a2e;
+  font-weight: bold;
+  cursor: pointer;
+}
+textarea {
+  width: 100%;
+}
+.comments {
+  max-height: 300px;
+  overflow-y: scroll;
+}
